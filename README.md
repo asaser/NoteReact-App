@@ -5,7 +5,7 @@
 NoteReact-App is an application with which you can create your notes and easily manage them. This application also connects to the database (firebase) 
 so you will never lose your notes. It doesn't have many functions at the moment, but it will be improved over time. 
 
-## Install Program
+## Install APP
 
 I. What do you need to install:
 1. npm and Node.js (https://nodejs.org/en/download/)
@@ -15,6 +15,23 @@ I. What do you need to install:
 4. Router:    npm install react-router-dom
 
 ## Firebase and API (2 options)
+
+Important: If you create your own database use its structure as in the picture below. 
+
+* the name of the main database structure must be named: notes
+
+<p align="center">
+<img src="ReadmeImg\DatabaseArchitecture.png">
+</p>
+
+* In Firebase in the rules, change the files to the following structure:
+
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
 
 1. First Option
 
