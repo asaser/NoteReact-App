@@ -52,17 +52,17 @@ My API Key is in a file that's in .gitignore but if you are a trusted person I c
 1. Main Page
 
 <p align="center">
-<img src="ReadmeIMG\Image_1.png">
+<img src="ReadmeImg\Image_1.png">
 </p>
 
 2. Detale Notes (NoteDetalePage.js)
 
 <p align="center">
-<img src="ReadmeIMG\Image_2.png.png">
+<img src="ReadmeImg\Image_2.png.png">
 </p>
 
 3. Delete Notes (DeletePage.js)
 
 <p align="center">
-<img src="ReadmeIMG\Image_3.png">
+<img src="ReadmeImg\Image_3.png">
 </p>
