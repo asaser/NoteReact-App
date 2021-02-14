@@ -45,3 +45,24 @@ My API Key is in a file that's in .gitignore but if you are a trusted person I c
 - NoteReact-App/src/pages/DeletePages/DeletePage.js           - page with deleted notes
 - NoteReact-App/src/pages/NoteDetalePages/NoteDetalePage.js   - page with notes content. It has the titles and the contents of the notes
 - NoteReact-App/src/App.js                                    - main file that supports all of the above files
+
+
+## How looks like app
+
+1. Main Page
+
+<p align="center">
+<img src="ReadmeIMG\Image_1.png">
+</p>
+
+2. Detale Notes (NoteDetalePage.js)
+
+<p align="center">
+<img src="ReadmeIMG\Image_2.png.png">
+</p>
+
+3. Delete Notes (DeletePage.js)
+
+<p align="center">
+<img src="ReadmeIMG\Image_3.png">
+</p>
