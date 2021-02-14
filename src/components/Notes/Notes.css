@@ -1,0 +1,23 @@
+.noteNewCreate {
+    margin-top: 10px;
+}
+
+.noteMain {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.noteTitleButton {
+    margin: 20px 0 20px 0;
+    background-color: rgba(12, 182, 34, 0.616);
+}
+
+.noteTitle:hover {
+    border: 3px solid rgba(4, 71, 13, 0.829);
+    background-color: rgba(10, 121, 25, 0.616);
+    opacity:1.0;
+}
+
+.pageDeleteButton {
+    margin-top: 30px;
+}

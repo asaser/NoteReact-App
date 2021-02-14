@@ -1,0 +1,13 @@
+.deletePageFrame {
+    border: 5px solid rgba(4, 71, 13, 0.829);
+    margin: 10px;
+}
+
+.noteAllContent {
+}
+
+.noteAllContent:hover {
+    border: 3px solid rgba(4, 71, 13, 0.829);
+    background-color: rgba(10, 121, 25, 0.616);
+    opacity:1.0;
+}

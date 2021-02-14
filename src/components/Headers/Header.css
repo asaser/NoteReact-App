@@ -1,0 +1,11 @@
+.headerText {
+    text-align: center;
+    background-color: rgba(10, 121, 25, 0.616);
+}
+
+.headerTextTitle {
+    color: rgb(44, 41, 41);
+    font-weight: bold;
+    font-size: 50px;
+    padding: 12px;
+}
