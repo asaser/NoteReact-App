@@ -11,26 +11,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export class Notes extends Component {
 
-    // PROPS daje możliwość wstępu do elementów drzewa DOM
-    // constructor(props) {
-    //     super(props);
-    // }
-
+  // updating database with notes
     updateNote (note) {
-// kiedy dostanie referencję do NOTES w BD i za każdym razem kiedy naciśniemy X dostajemy ID dziecka i usuwamy to
-// usuwa z BazyDanych
         firebase.database().ref('notes').child(note.id).update({
           isActive: false
         });
         this.props.onNoteDelete(note);
       }
 
+      // add JSX section to show all elements
       renderNote (note) {
         return(
           <section>
             <div className="note" key={note.id}>
               <div className="noteTitleButton">
                 <div className="noteTitle">
+
+                {/* subpage linking so that notes are displayed on it */}
                   <Link to={"/NoteDetalePage/" + note.id}>
                       <h3>{note.title}</h3>
                   </Link>
@@ -54,13 +51,15 @@ export class Notes extends Component {
 
           <div className="newCreateNotes">
             <div className="notes">
+
+            {/* element mapping and assignment to JSX of the above elements */}
               {this.props.notes.map(note => (
                 this.renderNote(note)
               ))}
             </div>
           </div>
 
-            {/* przejscie do innej strony */}
+            {/* go to the subpage with deleted notes*/}
             <Link to="/DeletePage">
                 <Button className="pageDeleteButton" variant="danger" size="lg" block>Page Delete Task</Button>
             </Link>

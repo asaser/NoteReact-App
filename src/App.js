@@ -29,7 +29,7 @@ class App extends Component {
   constructor() {
     super();
 
-// tworzymy pustą tablicę ponieważ tutaj będą dodawane różne notatki
+    // creating a blank table for notes
     this.state = {
       notes: []
     }
@@ -37,7 +37,7 @@ class App extends Component {
     this.onNoteDelete = this.onNoteDelete.bind(this);
   }
 
-
+  // returns all filtered notes from the database by their ID
     onNoteDelete(note) {
       console.log(note);
       this.setState((state) => {
@@ -51,13 +51,16 @@ class App extends Component {
       })
     }
 
-  // wczytuje się na samym końcu. constructor, render i potem on
+    // loads third (constructor, render, componentDidMount).
+    // Connects to the firebase database and calls the listenForChange () functions
   componentDidMount() {
     this.db = firebase.database();
 
     this.listenForChange();
   }
 
+
+  // reads the entire database and adds elements to it with ID, title, note, isActive
   listenForChange() {
 
     this.db.ref('notes').on('child_added', snapshot => {
@@ -69,6 +72,8 @@ class App extends Component {
         isActive: snapshot.val().isActive
       }
 
+      // reads all items from the database for note.
+      // It then filters whether a note exists and returns the flag of the note element
       this.setState((state) => {
         const notes = [...state.notes, note];
         return {
@@ -79,13 +84,14 @@ class App extends Component {
       })
     });
 
-// skopiowana cała funckja z góry
-// usuwanie w przeglądarce notatek
+      // reads all items from the database for note.
+
     this.db.ref('notes').on('child_removed', snapshot => {
 
       let notes = this.state.notes;
 
-// jeśli nasza notatka nie jest równa KEY wtedy usuwana jest notatka
+    // jeśli nasza notatka nie jest równa KEY wtedy usuwana jest notatka
+    // and deleting items in the database whose ID is not equal to the primary key
       notes = notes.filter(note => note.id !== snapshot.key);
       this.setState({
         notes: notes
@@ -98,6 +104,7 @@ class App extends Component {
     return (
       <div className="App">
 
+{/* use Router to connect to other files and allow them to connect to other pages contained in this project */}
         <Router>
           <Header></Header>
             <Switch>
@@ -115,6 +122,7 @@ class App extends Component {
                   </Container>
                  </Route>
 
+                 {/* reading from the NoteDetalePage ID file its elements and creating specially each page for each element with ID */}
                  <Route exact path="/NoteDetalePage/:id" component={NoteDetalePage}></Route>
 
                  <Route exact path="/DeletePage" component={DeletePage}></Route>

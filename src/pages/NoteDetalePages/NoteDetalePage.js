@@ -4,12 +4,10 @@ import firebase from 'firebase/app';
 import 'firebase/database';
 import './NoteDetalePage.css';
 
-// bootstrap
-import { Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 export class NoteDetalePage extends Component {
 
+
+    // creating an empty object that will catch the notes
     constructor (props) {
 
         super(props);
@@ -18,10 +16,12 @@ export class NoteDetalePage extends Component {
         }
     }
 
+    // go back the entire database and take all items by their ID
     getNote() {
         return firebase.database().ref('notes').child(this.props.match.params.id).get()
     }
 
+    // taking notes from the database (getNote ()) and assigning its value to each note
     componentDidMount() {
         this.getNote().then((note) =>{
 			this.setState({note: note.val()})
@@ -31,7 +31,7 @@ export class NoteDetalePage extends Component {
 
     render() {
 
-        // to samo
+        // you can also replace this with:
         // const note = this.state.note
         // const {note, color, ...} = this.state
         const {note} = this.state;

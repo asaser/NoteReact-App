@@ -7,7 +7,7 @@ import firebase from 'firebase/app';
 import "firebase/database";
 import config from './config.json';
 
-// to będzie można przenieść do innego folderu
+//my firebase API
 const firebaseConfig = {
   apiKey: config.firebaseAPI,
   authDomain: "reactnotes-app.firebaseapp.com",
@@ -17,6 +17,7 @@ const firebaseConfig = {
   messagingSenderId: "1084941155966",
   appId: "1:1084941155966:web:0c174f7cde123b9e8e222f"
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
