@@ -58,7 +58,7 @@ My API Key is in a file that's in .gitignore but if you are a trusted person I c
 2. Detale Notes (NoteDetalePage.js)
 
 <p align="center">
-<img src="ReadmeImg\Image_2.png.png">
+<img src="ReadmeImg\Image_2.png">
 </p>
 
 3. Delete Notes (DeletePage.js)
