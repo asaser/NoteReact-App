@@ -1,5 +1,8 @@
 # Note APP (React-Firebase)
 
+## Important!!!
+If you want use this APP, you must get API key to firebase (look below "Firebase and API".
+
 ## About
 
 NoteReact-App is an application with which you can create your notes and easily manage them. This application also connects to the database (firebase) 
